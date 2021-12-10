@@ -1,0 +1,102 @@
+.container{
+    display: flex;
+    padding-top:15px ;
+    flex-direction:row;
+    justify-content:center;
+    gap:10px;
+    width: 75%;
+    margin: auto;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #f8e2e2;
+}
+aside,menu{
+    border-radius: 12px;
+    padding: 22px;
+}
+menu{
+    flex-grow: 7;
+    background-color: white;
+    
+}
+.burger-icon{
+    display: none;
+}
+ 
+.form{
+    display: grid;
+    grid-template-areas: 
+    'fname email'
+    'comment comment'
+    'btn btn';
+    grid-gap: 18px;
+    padding: 20px ;
+}
+
+.fname{ 
+    grid-area: fname;
+ }
+.mail{
+     grid-area: email;
+     }
+.comment{
+     grid-area: comment;
+     }
+.btn{
+     grid-area: btn; 
+    }
+input, textarea{
+    padding: 12px 12px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgb(187, 158, 158) ;
+}
+textarea{
+    resize: none;
+    height: 180px;
+    width: 650px;
+}
+aside{
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 200px;
+    color: white;
+    background-color: #955db6;
+    flex-direction: column;
+    justify-content: space-between;
+}
+aside h2{
+    font-size: 35px;
+}
+aside h3{
+    font-size: 25px;
+}
+aside>p{
+    font-size: 13px;
+}
+label{
+    display: block;
+}
+button{
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #913b9c;
+    width: 650px;
+}
+button:hover{
+    background-color:  #521152;
+}
+@media only screen and (max-width: 600px)  {
+    aside{
+        display: none;
+    }
+     .burger-icon{
+        display: inline;
+        cursor: pointer;
+        font-size: 30px;
+    }
+}
